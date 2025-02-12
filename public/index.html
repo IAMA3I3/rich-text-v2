@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- tailwind -->
-    <link rel="stylesheet" href="src/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- tailwind -->
+  <link rel="stylesheet" href="src/style.css">
+  <title>Document</title>
 </head>
+
 <body>
+  <!--  -->
+  <div class=" w-screen h-screen flex justify-center items-center p-8">
     <!--  -->
+    <div class=" w-full max-w-[500px]">
+      <!-- buttons -->
+      <div class=" flex gap-2">
+        <button data-command="bold" class=" editor-btn w-[30px] aspect-square rounded border-2 font-semibold cursor-pointer flex justify-center items-center active:scale-95 border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white">B</button>
+        <button data-command="italic" class=" editor-btn w-[30px] aspect-square rounded border-2 font-semibold cursor-pointer flex justify-center items-center active:scale-95 border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white">I</button>
+        <button data-command="underline" class=" editor-btn w-[30px] aspect-square rounded border-2 font-semibold cursor-pointer flex justify-center items-center active:scale-95 border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white">U</button>
+        <button data-command="createLink" class=" editor-btn w-[30px] aspect-square rounded border-2 font-semibold cursor-pointer flex justify-center items-center active:scale-95 border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white">&#x1F517;</button>
+        <div id="color-btn" class=" w-[30px] aspect-square rounded border-2 font-semibold cursor-pointer flex justify-center items-center active:scale-95 border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white">
+            <input type="color" id="textColor" class=" rounded cursor-pointer">
+        </div>
+      </div>
+      <!-- editor -->
+      <div id="editor" contenteditable="true" class=" mt-2 w-full h-[100px] p-2 rounded bg-gray-200 outline-none focus:bg-gray-300 overflow-y-auto"></div>
+      <!-- text area -->
+      <textarea name="name" id="rich-text-area" class=" mt-2 p-2 w-full min-h-[100px] rounded bg-gray-200 outline-none" readonly></textarea>
+    </div>
+    <!--  -->
+  </div>
+  <!--  -->
+  <script src="./src/editor.js"></script>
 </body>
+
 </html>
